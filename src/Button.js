@@ -2,8 +2,12 @@ import App from "./App";
 import PropTypes from "prop-types";
 import styles from "./Button.module.css";
 
-function Button({ text }) {
-  return <button className={styles.btn}>{text}</button>;
+function Button({ text, onClick }) {
+  return (
+    <button onClick={onClick} className={styles.btn}>
+      {text}
+    </button>
+  );
 }
 
 Button.propTypes = {
